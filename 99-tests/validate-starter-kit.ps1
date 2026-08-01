@@ -35,6 +35,10 @@ $required = @(
     "09-system-adapters\codex\AGENTS.md.template",
     "09-system-adapters\claude\CLAUDE.md.template",
     "09-system-adapters\chatgpt\PROJECT-INSTRUCTIONS.template.md",
+    "optional-codex-skill\ai-os-project-bootstrap\SKILL.md",
+    "optional-codex-skill\ai-os-project-bootstrap\references\project-binding.md",
+    "optional-codex-skill\ai-os-project-bootstrap\scripts\bind_project.py",
+    "optional-codex-skill\ai-os-project-bootstrap\scripts\validate_project_binding.py",
     "99-tests\release-checklist.md"
     ,"scripts\initialize-process.sh"
     ,"scripts\validate-process.sh"

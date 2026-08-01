@@ -46,6 +46,21 @@ powershell -NoProfile -ExecutionPolicy Bypass -File .\99-tests\validate-starter-
 - Losing durable decisions after compaction or a cross-agent handoff.
 - Calling work complete without a test, a live check, or an explicit limitation.
 
+## Bind A Project
+
+Initialize the personal process once, then bind each repository to it. The project bridge keeps shared rules outside the repository, commits project-specific instructions, and ignores the local process path and session handoff.
+
+```sh
+python3 optional-codex-skill/ai-os-project-bootstrap/scripts/bind_project.py \
+  --repo "/path/to/project" \
+  --process-root "/path/to/AI-Operating-Process"
+
+python3 optional-codex-skill/ai-os-project-bootstrap/scripts/validate_project_binding.py \
+  --repo "/path/to/project" --require-local
+```
+
+The binder adds `AGENTS.md` for Codex, `CLAUDE.md` for Claude Code, and a `.ai-operating-process/` project folder. Existing agent instruction files are not changed unless `--integrate-existing` is explicitly supplied after review. For ChatGPT, attach `.ai-operating-process/CHATGPT-PROJECT-PACKET.md` with the relevant process files to the Project.
+
 ## Important Boundary
 
 Markdown files govern intent. They do not enforce permissions by themselves, prove live infrastructure state, or prevent an agent from executing a command outside the process. Use the included approval gates, preflight routine, version control, least-privilege credentials, and platform controls for real enforcement.
@@ -62,6 +77,7 @@ Markdown files govern intent. They do not enforce permissions by themselves, pro
 07-output-templates/   Completion, blocker, and handoff formats.
 08-memory-updates/     Durable continuity notes.
 09-system-adapters/    Codex, Claude, and ChatGPT setup files.
+optional-codex-skill/  Optional Codex skill, including per-project bootstrap.
 scripts/               Native shell and Python setup and validation.
 99-tests/              A local validation script and release checklist.
 ```

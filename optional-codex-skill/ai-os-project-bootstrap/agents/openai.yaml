@@ -1,0 +1,4 @@
+interface:
+  display_name: "AI OS Project Bootstrap"
+  short_description: "Bind a repository to the AI Operating Process"
+  default_prompt: "Use $ai-os-project-bootstrap to connect this repository to my AI Operating Process."

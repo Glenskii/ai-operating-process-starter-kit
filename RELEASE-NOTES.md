@@ -1,3 +1,7 @@
+# Version 1.1.0
+
+Adds the AI OS Project Bootstrap skill and standard-library Python binder. It creates a safe per-repository bridge for Codex, Claude Code, and ChatGPT, preserves existing agent instructions unless explicitly integrated, keeps local process paths and handoff state out of Git, and validates the binding before work starts.
+
 # Version 1.0.2
 
 Removes GNU-specific shell argument handling from the POSIX scripts for macOS BSD userland compatibility. Documents that PowerShell files included in initialized folders are optional Windows adapters and are not required on macOS or Linux.
