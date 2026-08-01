@@ -7,6 +7,7 @@ $ErrorActionPreference = "Stop"
 $required = @(
     "README.md",
     ".gitignore",
+    ".gitattributes",
     "Initialize-AIOperatingProcess.ps1",
     "00-START-HERE.md",
     "00-CORE-INDEX.md",
@@ -35,6 +36,10 @@ $required = @(
     "09-system-adapters\claude\CLAUDE.md.template",
     "09-system-adapters\chatgpt\PROJECT-INSTRUCTIONS.template.md",
     "99-tests\release-checklist.md"
+    ,"scripts\initialize-process.sh"
+    ,"scripts\validate-process.sh"
+    ,"scripts\initialize_process.py"
+    ,"scripts\validate_process.py"
 )
 
 $missing = foreach ($relative in $required) {

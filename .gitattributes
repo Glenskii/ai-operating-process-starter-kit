@@ -1,0 +1,3 @@
+# PowerShell is an optional Windows adapter, not the primary implementation.
+*.ps1 linguist-detectable=false
+*.md linguist-documentation=true
