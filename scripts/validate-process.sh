@@ -21,7 +21,8 @@ while [ "$#" -gt 0 ]; do
 done
 
 if [ -z "$root" ]; then
-    root=$(CDPATH= cd -- "$(dirname -- "$0")/.." && pwd)
+    script_directory=$(CDPATH= cd "$(dirname "$0")" && pwd)
+    root=$(CDPATH= cd "$script_directory/.." && pwd)
 fi
 
 missing=0

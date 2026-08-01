@@ -26,7 +26,8 @@ done
 
 [ -n "$destination" ] || { usage; exit 2; }
 
-source_root=$(CDPATH= cd -- "$(dirname -- "$0")/.." && pwd)
+script_directory=$(CDPATH= cd "$(dirname "$0")" && pwd)
+source_root=$(CDPATH= cd "$script_directory/.." && pwd)
 case "$destination" in
     /*) resolved_destination="$destination" ;;
     *) resolved_destination="$(pwd)/$destination" ;;

@@ -23,6 +23,8 @@ sh scripts/initialize-process.sh --destination "$HOME/AI-Operating-Process"
 sh scripts/validate-process.sh --root "$HOME/AI-Operating-Process"
 ```
 
+The initialized folder includes `Initialize-AIOperatingProcess.ps1` and the PowerShell validator for cross-platform output parity. They are optional Windows adapters. macOS and Linux users do not need PowerShell to initialize or validate the process.
+
 ### Any System With Python 3
 
 ```sh
