@@ -1,0 +1,4 @@
+interface:
+  display_name: "AI Operating Process"
+  short_description: "Route governed AI work from a portable kit"
+  default_prompt: "Use $ai-operating-process to set up or run a governed AI task."

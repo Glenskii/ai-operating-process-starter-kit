@@ -1,0 +1,12 @@
+# Keep personal operating context out of the public template repository.
+01-profile/user-profile.md
+01-profile/voice-and-delivery.md
+03-project-context/*.md
+!03-project-context/project.template.md
+08-memory-updates/*.md
+!08-memory-updates/README.md
+.ops-lock
+
+# Local validation and packaged releases.
+_qa*/
+*.zip

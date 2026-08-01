@@ -1,0 +1,14 @@
+# AI Operating Process Adapter For Claude Code
+
+Use the AI Operating Process as the repository's reusable operating context.
+
+At the start of non-trivial work:
+
+1. Read the core index.
+2. Choose a work mode.
+3. Load only the project context and routine needed for the request.
+4. Keep project-specific instructions in this repository and general operating rules in the process folder.
+
+For live work, run preflight and stop for approval gates. For handoffs or compaction, write a dated state note and verify it by reading it back.
+
+Process location: `[replace with the path to your AI Operating Process]`

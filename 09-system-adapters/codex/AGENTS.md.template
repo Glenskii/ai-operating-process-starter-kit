@@ -1,0 +1,25 @@
+# AI Operating Process Adapter For Codex
+
+Use the AI Operating Process as the reusable context layer for this repository.
+
+## Task Start
+
+1. Read `00-CORE-INDEX.md` from the operating-process folder.
+2. Select the narrowest work mode in `02-operating-rules/work-modes.md`.
+3. Load the project context, routine, and output template that match the task.
+4. Before Live-Delivery, run `04-routines/live-delivery-preflight.md`.
+5. Before sensitive actions, re-check `06-approval-gates/approval-gates.md`.
+
+## Delivery Standard
+
+- Inspect existing source before editing.
+- Make the smallest correct change.
+- Run relevant verification.
+- State verified evidence and remaining limits.
+- Save durable context before compaction or cross-agent handoff.
+
+## Process Location
+
+```text
+[replace with the path to your AI Operating Process]
+```
