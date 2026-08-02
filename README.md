@@ -61,6 +61,8 @@ python3 optional-codex-skill/ai-os-project-bootstrap/scripts/validate_project_bi
 
 The binder adds `AGENTS.md` for Codex, `CLAUDE.md` for Claude Code, and a `.ai-operating-process/` project folder. Existing agent instruction files are not changed unless `--integrate-existing` is explicitly supplied after review. For ChatGPT, attach `.ai-operating-process/CHATGPT-PROJECT-PACKET.md` with the relevant process files to the Project.
 
+Read [the plain-language project bootstrap guide](optional-codex-skill/ai-os-project-bootstrap/references/user-guide.md) for the one-time setup message, the first Claude Code session check, and the short message to use in later sessions.
+
 ## Important Boundary
 
 Markdown files govern intent. They do not enforce permissions by themselves, prove live infrastructure state, or prevent an agent from executing a command outside the process. Use the included approval gates, preflight routine, version control, least-privilege credentials, and platform controls for real enforcement.

@@ -1,3 +1,7 @@
+# Version 1.1.1
+
+Adds a plain-language user guide for the project bootstrap skill. It explains the one-time setup, the first Claude Code session, later-session message, ChatGPT attachment step, and the limits of a Markdown-based process.
+
 # Version 1.1.0
 
 Adds the AI OS Project Bootstrap skill and standard-library Python binder. It creates a safe per-repository bridge for Codex, Claude Code, and ChatGPT, preserves existing agent instructions unless explicitly integrated, keeps local process paths and handoff state out of Git, and validates the binding before work starts.

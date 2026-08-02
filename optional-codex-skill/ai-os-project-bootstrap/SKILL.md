@@ -7,6 +7,8 @@ description: Bind a new or existing repository to a local AI Operating Process u
 
 Create a project-level bridge to an existing AI Operating Process. Keep reusable rules in the process folder and repository-specific context in `.ai-operating-process/`.
 
+Read `references/user-guide.md` when explaining the setup to a user. Use its three-message sequence instead of giving a long technical explanation.
+
 ## Workflow
 
 1. Locate the process root from the request, `AI_OPERATING_PROCESS_ROOT`, or existing `.ai-operating-process/config.local.json`.
@@ -24,6 +26,10 @@ python scripts/validate_project_binding.py --repo [repository] --require-local
 ```
 
 Use `--integrate-existing` only after reviewing a pre-existing `AGENTS.md` or `CLAUDE.md`. The command appends one managed block and does not rewrite existing instructions.
+
+## User Outcome
+
+After one-time setup, Codex and Claude Code enter through the repository instructions and use the project context on later sessions. The user normally begins later work with: `Read the project instructions and context. Continue safely from the current project state.`
 
 ## Boundaries
 
