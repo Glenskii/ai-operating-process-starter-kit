@@ -1,6 +1,6 @@
 ---
 name: ai-os-project-bootstrap
-description: Bind a new or existing repository to a local AI Operating Process using a committed project bridge, project context, Codex AGENTS.md, Claude CLAUDE.md, local path configuration, handoff state, and validation. Use when a user starts a project, wants Codex or Claude Code to inherit their AI process, needs to connect a repository to reusable routines and approval gates, or asks to validate that a project is correctly bound.
+description: Bind a new or existing repository to a local AI Operating Process using a vendor-neutral session brief, project context, optional platform adapters, local path configuration, handoff state, and validation. Use when a user starts a project, wants any AI assistant to inherit a consistent process, needs to connect a repository to reusable routines and approval gates, or asks to validate that a project is correctly bound.
 ---
 
 # AI OS Project Bootstrap
@@ -29,7 +29,7 @@ Use `--integrate-existing` only after reviewing a pre-existing `AGENTS.md` or `C
 
 ## User Outcome
 
-After one-time setup, Codex and Claude Code enter through the repository instructions and use the project context on later sessions. The user normally begins later work with: `Read the project instructions and context. Continue safely from the current project state.`
+After one-time setup, any AI assistant can use `.ai-operating-process/AI-SESSION-BRIEF.md` and the project context. Platform-specific files such as `AGENTS.md`, `CLAUDE.md`, and `CHATGPT-PROJECT-PACKET.md` are adapters, not the source of truth. The user normally begins later work with: `Read the AI Session Brief and project context. Continue safely from the current project state.`
 
 ## Boundaries
 

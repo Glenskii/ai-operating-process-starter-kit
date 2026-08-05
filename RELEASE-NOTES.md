@@ -1,3 +1,7 @@
+# Version 1.2.0
+
+Makes the project bootstrap vendor-neutral. The project now has `AI-SESSION-BRIEF.md` as its primary entry point for any AI assistant. Codex, Claude Code, and ChatGPT files remain optional adapters, and the user guide now explains a generic first-session and later-session workflow.
+
 # Version 1.1.1
 
 Adds a plain-language user guide for the project bootstrap skill. It explains the one-time setup, the first Claude Code session, later-session message, ChatGPT attachment step, and the limits of a Markdown-based process.

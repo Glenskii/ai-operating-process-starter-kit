@@ -14,10 +14,8 @@ MARKER_END = "<!-- ai-os-project-bootstrap:end -->"
 REQUIRED = [
     ".ai-operating-process/.gitignore",
     ".ai-operating-process/README.md",
+    ".ai-operating-process/AI-SESSION-BRIEF.md",
     ".ai-operating-process/project-context.md",
-    ".ai-operating-process/CHATGPT-PROJECT-PACKET.md",
-    "AGENTS.md",
-    "CLAUDE.md",
 ]
 
 

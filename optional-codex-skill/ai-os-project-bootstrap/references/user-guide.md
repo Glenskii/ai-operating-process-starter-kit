@@ -1,25 +1,14 @@
 # AI OS Project Bootstrap: User Guide
 
-## What This Does
+## The Simple Version
 
-This connects one project to your AI Operating Process.
+Set up a project once. Then give any AI assistant one short message when you start a new session.
 
-You set it up once. After that, Codex and Claude Code can read the project instructions and context whenever you open a new session in that project.
-
-It does not copy your private operating process into Git. It stores only the project instructions in the repository. Your local process location and unfinished-session notes stay on your computer and are ignored by Git.
-
-## Before You Start
-
-You need two folders:
-
-1. Your personal AI Operating Process folder.
-2. The new or existing project folder you want an AI to work on.
-
-For an existing project, the bootstrap checks its current instructions first. It does not overwrite them. If it finds an existing `AGENTS.md` or `CLAUDE.md`, it stops and asks before adding its bridge.
+The project keeps its own facts, tests, safety rules, and delivery steps. Your private AI Operating Process stays outside Git. The assistant uses the same process whether you choose Codex, Claude Code, ChatGPT, Gemini, or another capable tool.
 
 ## Step 1: Set Up The Project Once
 
-Open Codex in the project folder and send this message:
+Use Codex to run the bootstrap skill. Open Codex in the project folder and send:
 
 ```text
 Use $ai-os-project-bootstrap to connect this repository to my AI Operating Process.
@@ -27,46 +16,47 @@ Use $ai-os-project-bootstrap to connect this repository to my AI Operating Proce
 Inspect the existing project first. Do not overwrite anything. Add the bridge only where safe, fill in project context from the repository, and stop only for details you cannot discover. Run the binding validator when complete.
 ```
 
-The skill creates:
+Codex creates the project bridge:
 
 ```text
-AGENTS.md                              Instructions for Codex
-CLAUDE.md                              Instructions for Claude Code
+.ai-operating-process/AI-SESSION-BRIEF.md
+                                        Starting point for any AI assistant
 .ai-operating-process/project-context.md
                                         Project facts, tests, delivery steps, and protected areas
-.ai-operating-process/CHATGPT-PROJECT-PACKET.md
-                                        File to use with a ChatGPT Project
+.ai-operating-process/handoff.md       Local continuity note, not committed to Git
+AGENTS.md, CLAUDE.md                    Optional local-agent adapters
+CHATGPT-PROJECT-PACKET.md               Optional ChatGPT adapter
 ```
 
-Before calling setup complete, fill in anything the repository cannot reveal: live URL, deployment command, client constraints, protected systems, and the real test or live-check steps.
+For an existing project, the skill checks before changing `AGENTS.md` or `CLAUDE.md`. It does not overwrite either file.
 
-## Step 2: Start The First Claude Code Session
+Finish `project-context.md` with anything the repository cannot tell the assistant: live URL, deployment command, client constraints, protected systems, and the real test or live-check steps.
 
-Open Claude Code in the same project folder. Then send this message:
+## Step 2: Check The First Session
+
+Open your AI tool of choice in the project. Send this message:
 
 ```text
-Read the project instructions and context before starting. Tell me what you understand about this project, its protected areas, how it is tested, and what you need before making changes.
+Read the AI Session Brief and project context before starting. Tell me what you understand about this project, its protected areas, how it is tested, and what you need before making changes.
 ```
 
-This is a short check that Claude Code found the project instructions and understands the project before it starts editing.
+This confirms that the assistant has the right context before it edits, publishes, or deploys anything.
 
-## Step 3: Start Later Sessions
+## Step 3: Start Every Later Session
 
-For later Codex or Claude Code sessions in that project, begin with:
+For every later session in the same project, begin with:
 
 ```text
-Read the project instructions and context. Continue safely from the current project state.
+Read the AI Session Brief and project context. Continue safely from the current project state.
 ```
 
-The assistant should read `AGENTS.md` or `CLAUDE.md`, then the project context. If the previous session left a handoff note, it should use that too.
+If there is a handoff note from earlier work, the assistant should read it before continuing.
 
-## Using ChatGPT
+## How Each Tool Gets The Files
 
-ChatGPT cannot automatically read files from a local repository. Create a ChatGPT Project, attach `.ai-operating-process/CHATGPT-PROJECT-PACKET.md`, and attach the relevant process files and project context. Start the chat with:
-
-```text
-Read the attached operating process and project context. Work only from the information and tools available in this Project.
-```
+- Tools that automatically read repository instructions: use their normal repository-instruction file, such as `AGENTS.md` or `CLAUDE.md`. The bridge points them to the generic files.
+- Tools that can open local files: ask them to read `.ai-operating-process/AI-SESSION-BRIEF.md` and `project-context.md`.
+- Tools that only work with uploads or Projects: attach `AI-SESSION-BRIEF.md`, `project-context.md`, the relevant AI Operating Process files, and the tool's optional adapter packet if one exists.
 
 ## What This Does Not Do
 

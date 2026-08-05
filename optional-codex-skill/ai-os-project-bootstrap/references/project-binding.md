@@ -6,6 +6,7 @@ repository/
 ├── CLAUDE.md                         Claude Code entry point
 └── .ai-operating-process/
     ├── README.md                     Shared bridge contract
+    ├── AI-SESSION-BRIEF.md           Starting point for any AI assistant
     ├── project-context.md            Committed project facts and runbook
     ├── CHATGPT-PROJECT-PACKET.md     Attach to a ChatGPT Project
     ├── .gitignore                    Ignores local-only state
@@ -13,4 +14,4 @@ repository/
     └── handoff.md                    Session continuity, ignored
 ```
 
-The process root remains outside the repository. The repository only records how agents should discover and apply it on a machine where the owner has configured the local path.
+The process root remains outside the repository. `AI-SESSION-BRIEF.md` is the source of truth for any AI assistant. The named files at repository root and the ChatGPT packet are optional platform adapters.
