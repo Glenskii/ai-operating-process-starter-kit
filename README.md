@@ -2,6 +2,9 @@
 
 A portable, file-based operating process for using AI across Codex, Claude, ChatGPT, and similar tools.
 
+> [!NOTE]
+> This project is also maintained within the [LLM Ops Toolkit](https://github.com/Glenskii/llm-ops-toolkit), alongside recovery tools for Claude and Codex sessions. This standalone repository remains available for existing links, releases, and direct use.
+
 This is not a prompt library. It is a small set of editable files that tells an assistant how to work: what context matters, which mode applies, what requires approval, how to preserve state, and what proof is required before calling work complete.
 
 ```text
